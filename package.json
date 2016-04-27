@@ -9,15 +9,17 @@
     "lint": "eslint --ext .js,.jsx .",
     "deploy": "npm run clean & npm run build && surge -p .",
     "start": "NODE_ENV=development node server.js",
-    "test": "ava"
+    "test": "ava",
+    "tdd": "ava -w"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
     "normalize.css": "3.0.3",
     "react": "^0.14.3",
-    "react-dom": "^0.15.1",
-    "spectacle": "^1.0.0"
+    "react-dom": "^0.14.3",
+    "spectacle": "^1.0.5",
+    "spectacle-code-slide": "^0.1.10"
   },
   "devDependencies": {
     "autoprefixer-core": "^6.0.1",
