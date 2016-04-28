@@ -1,7 +1,13 @@
 import React from 'react'
 import test from 'ava'
 import { shallow, mount } from 'enzyme'
+import jsdom from 'jsdom'
 import Counter from '../components/counter'
+
+const doc = jsdom.jsdom('<!doctype html><html><body></body></html>')
+const win = doc.defaultView
+global.document = doc
+global.window = win
 
 const SubSubComp = (props) => {
   console.log('subsub')

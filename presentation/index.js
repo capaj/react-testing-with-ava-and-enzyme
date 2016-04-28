@@ -45,11 +45,11 @@ export default class Presentation extends React.Component {
             Testing React.js applications
           </Heading>
           <Text bold caps textColor='secondary'>
-            Disclaimer: I am with STRV just 2 months.
+            Disclaimer: I have started at STRV just 2 months ago.
           </Text>
           <Link href='https://github.com/capaj/react-testing-with-ava-and-enzyme'>
           <Text bold caps textColor='tertiary'>
-            View on Github
+            capaj.github.io/react-testing-with-ava-and-enzyme
           </Text>
           </Link>
         </Slide>
@@ -231,7 +231,9 @@ export default class Presentation extends React.Component {
           </Heading>
           <List>
           <ListItem>
-            <Link bold href='https://github.com/sindresorhus/ava#table-of-contents'>speed(asynchronous execution)</Link>
+            <Link bold href='https://github.com/sindresorhus/ava#table-of-contents'>
+              speed(asynchronous execution)
+            </Link>
           </ListItem>
           </List>
           <List>
@@ -276,11 +278,11 @@ export default class Presentation extends React.Component {
           lang="jsx"
           code={require("raw!../assets/shallow.spec.example")}
           ranges={[
-            { loc: [5, 21]},
+            { loc: [11, 27]},
             { loc: [1, 2], note: "Import ava" },
             { loc: [2, 3], note: "Import enzyme methods" },
             { loc: [21, 22], note: 'Call it providing your component as only param' },
-            { loc: [33, 34], note: 'Throws' }
+            { loc: [41, 42], note: 'same with mount' }
           ]}/>
         <Slide transition={['slide', 'spin']} bgColor='primary' notes='Enzyme is a straightfoward library, but when it comes to full dom rendering, it uses JSDOM. JSDOM is not included-you can choose your own DOM implementation.'>
           <Heading
@@ -301,8 +303,22 @@ export default class Presentation extends React.Component {
             { loc: [21, 22]}
           ]}/>
         <Slide>
-          <Heading>
-            Obligatory links slide:
+          <Heading caps>
+            Working with state and events in Enzyme
+          </Heading>
+        </Slide>
+        <CodeSlide
+          transition={[]}
+          lang="jsx"
+          code={require("raw!../assets/state.example")}
+          ranges={[
+            { loc: [7, 8]},
+            { loc: [10, 13]},
+            { loc: [13, 14]}
+          ]}/>
+        <Slide notes='but enzyme api is too big to fit in this talk, so feel free to explore yourself'>
+          <Heading caps fit>
+            Obligatory links slide
           </Heading>
           <List>
             <ListItem>

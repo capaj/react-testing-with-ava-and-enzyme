@@ -18,7 +18,7 @@ const Hello = (props) => {
   return <div><Counter/>Hello world<SubComp/></div>
 }
 
-test.only('calling text method', t => {
+test('calling text method', t => {
   const wrapper = shallow(<Hello/>)
   console.log('will call wrapper.text()')
   t.is(wrapper.text(), '<Counter />Hello world<SubComp />')

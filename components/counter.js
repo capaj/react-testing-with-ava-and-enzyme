@@ -8,7 +8,10 @@ class Counter extends React.Component {
     }
   }
   render () {
-    return <div>{this.state.val}</div>
+    return <div onClick={() => {
+        console.log('click was called')
+      this.setState({val: this.state.val + 1})
+    }}>{this.state.val}</div>
   }
 }
 
