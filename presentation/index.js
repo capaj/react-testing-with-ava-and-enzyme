@@ -203,6 +203,7 @@ export default class Presentation extends React.Component {
           </Heading>
           <List>
           <ListItem>
+
             <Link bold href='https://github.com/sindresorhus/ava#table-of-contents'>speed(asynchronous execution)</Link>
           </ListItem>
           </List>
@@ -250,8 +251,9 @@ export default class Presentation extends React.Component {
           ranges={[
             { loc: [5, 19]},
             { loc: [1, 2], note: "Import ava" },
-            { loc: [2, 3], note: "Import enzyme shallow" },
-            { loc: [21, 22], note: 'Call it providing your component as only param' }
+            { loc: [2, 3], note: "Import enzyme methods" },
+            { loc: [21, 22], note: 'Call it providing your component as only param' },
+            { loc: [33, 34], note: 'Throws' }
           ]}/>
         <Slide transition={['slide', 'spin']} bgColor='primary' notes='Enzyme is a straightfoward library, but when it comes to full dom rendering, it uses JSDOM. JSDOM is not included-you can choose your own DOM implementation.'>
           <Heading
@@ -263,6 +265,14 @@ export default class Presentation extends React.Component {
             </Heading>
           <CodePane lang='jsx' source={require('raw!../assets/jsdom.example')} style={{fontSize: 30}} margin='20px auto' />
         </Slide>
+        <CodeSlide
+          transition={[]}
+          lang="jsx"
+          code={require("raw!../assets/static.example")}
+          ranges={[
+            { loc: [2, 3], note: "Import method" },
+            { loc: [21, 22]}
+          ]}/>
         <Slide>
           <Heading>
             Obligatory links slide:

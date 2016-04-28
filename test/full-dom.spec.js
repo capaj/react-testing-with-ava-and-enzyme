@@ -34,5 +34,5 @@ test('calling html method', t => {
   const wrapper = mount(<Hello/>)
   console.log('will call wrapper.html()')
   console.log(wrapper.state())
-  t.is(wrapper.html(), '<div><div>0</div>Hello world<div>subcomponent render output<div>subsubcomponent render output</div></div></div>')
+  t.is(wrapper.html(), '<div><div>0</div><span>Hello world</span><div><span>subcomponent render output</span><div>subsubcomponent render output</div></div></div>')
 })
