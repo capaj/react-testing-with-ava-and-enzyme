@@ -102,14 +102,42 @@ export default class Presentation extends React.Component {
             caps
             textColor='primary'
             margin={10}>
-            What is React.js?
+            How do we test React.js?
           </Heading>
-          <Text bold textColor='primary'>
-            app = f(state)
-          </Text>
+          <Appear>
+            <Heading
+              size={4}
+              caps
+              textColor='primary'
+              margin={10}>
+              What is React.js application?
+            </Heading>
+          </Appear>
           <br/>
+            <br/>
+          <Appear>
+            <Text bold textColor='primary'>
+              app = f(state)
+            </Text>
+          </Appear>
+            <br/>
+            <br/>
+          <Appear>
+            <Text>
+              f is magic
+            </Text>
+          </Appear>
+          <Appear>
+            <Text>
+              f are your react components composed into one function
+            </Text>
+          </Appear>
           <br/>
-          f is you react components
+          <Appear>
+            <Text>
+              f is not a collection of templates/functions which are executed/compiled in non standard manner with special rules
+            </Text>
+          </Appear>
         </Slide>
         <Slide transition={['zoom', 'fade']} bgColor='primary'>
           <Heading caps fit>
@@ -155,13 +183,13 @@ export default class Presentation extends React.Component {
           </Layout>
           <Layout>
           <Fill>
-              <Heading
-                size={4}
-                caps
-                textColor='tertiary'
-                margin={10}>
-                  Unit
-              </Heading>
+            <Heading
+              size={4}
+              caps
+              textColor='tertiary'
+              margin={10}>
+                Unit
+            </Heading>
           </Fill>
             <Image src={images.arrow} margin="0px auto 40px" style={{marginTop: -5}} height="100px"/>
           <Fill>
@@ -203,7 +231,6 @@ export default class Presentation extends React.Component {
           </Heading>
           <List>
           <ListItem>
-
             <Link bold href='https://github.com/sindresorhus/ava#table-of-contents'>speed(asynchronous execution)</Link>
           </ListItem>
           </List>
@@ -215,12 +242,12 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={['zoom', 'fade']} bgColor='primary' notes="otherwise babel won't be using react babel preset">
           <Heading
-              size={1}
-              caps
-              fit
-              textColor='secondary'>
-              When executing ava-inherit!
-            </Heading>
+            size={1}
+            caps
+            fit
+            textColor='secondary'>
+            When executing ava-inherit!
+          </Heading>
           <CodePane lang='jsx' source={require('raw!../assets/deck.example')} style={{fontSize: 30}} margin='20px auto' />
         </Slide>
         <Slide transition={['slide']} bgDarken={0.75} notes='ava provide a small comprehensive set of assertions, which are all on first parameter of the test callback function'>
@@ -249,7 +276,7 @@ export default class Presentation extends React.Component {
           lang="jsx"
           code={require("raw!../assets/shallow.spec.example")}
           ranges={[
-            { loc: [5, 19]},
+            { loc: [5, 21]},
             { loc: [1, 2], note: "Import ava" },
             { loc: [2, 3], note: "Import enzyme methods" },
             { loc: [21, 22], note: 'Call it providing your component as only param' },
