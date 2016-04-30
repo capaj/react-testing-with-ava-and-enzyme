@@ -230,15 +230,22 @@ export default class Presentation extends React.Component {
             Why AVA?
           </Heading>
           <List>
-          <ListItem>
-            <Link bold href='https://github.com/sindresorhus/ava#table-of-contents'>
-              speed(asynchronous execution)
-            </Link>
-          </ListItem>
-          </List>
-          <List>
             <ListItem>
-              <Link bold href='https://github.com/power-assert-js/babel-plugin-espower#description'>power asserts</Link>
+                speed(asynchronous execution of specs)
+                <Quote size={4} textColor='secondary' style={{
+                  marginTop: 10,
+                  marginBottom: 10,
+                  marginLeft: 32,
+                  fontSize: 25
+                }}>
+                   Pageres brought the test time down from 31 sec to 11 sec.
+                </Quote>
+            </ListItem>
+            <ListItem>
+              <Link textColor='primary' bold href='https://github.com/power-assert-js/babel-plugin-espower#description'>power asserts</Link>
+            </ListItem>
+            <ListItem>
+              <Link textColor='primary' bold href='https://github.com/sindresorhus/ava#cli'>useful cli</Link>
             </ListItem>
           </List>
         </Slide>
@@ -271,7 +278,10 @@ export default class Presentation extends React.Component {
               textColor='secondary'>
               Ava + Enzyme
             </Heading>
-
+            <CodePane>
+              ava --init;
+              npm i enzyme -S
+            </CodePane>
         </Slide>
         <CodeSlide
           transition={[]}
@@ -281,10 +291,10 @@ export default class Presentation extends React.Component {
             { loc: [11, 27]},
             { loc: [1, 2], note: "Import ava" },
             { loc: [2, 3], note: "Import enzyme methods" },
-            { loc: [21, 22], note: 'Call it providing your component as only param' },
+            { loc: [29, 30], note: 'Call it providing your component as only param' },
             { loc: [41, 42], note: 'same with mount' }
           ]}/>
-        <Slide transition={['slide', 'spin']} bgColor='primary' notes='Enzyme is a straightfoward library, but when it comes to full dom rendering, it uses JSDOM. JSDOM is not included-you can choose your own DOM implementation.'>
+        <Slide transition={['slide', 'spin']} bgColor='primary' notes='Enzyme is a straightfoward library, but when it comes to full dom rendering, it uses JSDOM. JSDOM is not included-you can choose your own DOM implementation. Show full.spec.js'>
           <Heading
               size={1}
               caps
