@@ -9,7 +9,7 @@
     "lint": "eslint --ext .js,.jsx .",
     "deploy": "npm run clean & npm run build && surge -p .",
     "start": "NODE_ENV=development node server.js",
-    "test": "ava",
+    "test": "NODE_ENV=test ava",
     "tdd": "ava -w"
   },
   "author": "",
